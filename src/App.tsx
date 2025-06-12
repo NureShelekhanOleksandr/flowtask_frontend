@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {
   Container,
-  AppBar,
   Toolbar,
   Typography,
   Button,
@@ -16,7 +15,7 @@ import {
   IconButton,
   CircularProgress,
 } from '@mui/material';
-import { Add as AddIcon, AccountCircle, Logout } from '@mui/icons-material';
+import { Add as AddIcon, Logout } from '@mui/icons-material';
 import { TaskList } from './components/TaskList';
 import { TaskForm } from './components/TaskForm';
 import { AuthPage } from './components/AuthPage';

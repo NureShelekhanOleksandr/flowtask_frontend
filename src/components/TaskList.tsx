@@ -105,8 +105,8 @@ export const TaskList = ({ tasks, onEdit, onDelete, onStatusChange, currentUserI
       {tasks.map((task) => {
         const statusInfo = statusConfig[task.status];
         const StatusIcon = statusInfo.icon;
-        const assignedUser = getUserById(task.assigned_user_id);
-        const createdBy = getUserById(task.created_by_id);
+        const assignedUser = getUserById(task.assigned_user_id ?? null);
+        const createdBy = getUserById(task.created_by_id ?? null);
         const isMine = currentUserId && task.assigned_user_id === currentUserId;
         
         return (

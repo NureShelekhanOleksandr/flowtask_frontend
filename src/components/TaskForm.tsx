@@ -13,11 +13,9 @@ import {
   Box,
   Typography,
   Avatar,
-  Chip,
 } from '@mui/material';
 import { Person, Assignment } from '@mui/icons-material';
 import { Task, TaskCreate, TaskStatus } from '../types/task';
-import { User } from '../types/user';
 import { userApi } from '../api/client';
 import { useAuth } from '../contexts/AuthContext';
 import { useQuery } from '@tanstack/react-query';

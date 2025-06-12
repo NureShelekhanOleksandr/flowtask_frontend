@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User, UserLogin, UserRegister, AuthState } from '../types/user';
+import { UserLogin, UserRegister, AuthState } from '../types/user';
 import { authApi } from '../api/client';
 
 interface AuthContextType extends AuthState {
@@ -83,8 +83,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const register = async (userData: UserRegister) => {
     try {
-      const user = await authApi.register(userData);
-      
+      await authApi.register(userData);
       // Auto-login after registration
       await login({ email: userData.email, password: userData.password });
     } catch (error) {
