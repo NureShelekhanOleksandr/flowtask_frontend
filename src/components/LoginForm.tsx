@@ -114,6 +114,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess, onSwitchToRegis
             onChange={handleInputChange}
             required
             sx={{ mb: 3 }}
+            data-testid="password-input"
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
@@ -125,6 +126,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess, onSwitchToRegis
                   <IconButton
                     onClick={() => setShowPassword(!showPassword)}
                     edge="end"
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
                   >
                     {showPassword ? <VisibilityOff /> : <Visibility />}
                   </IconButton>
